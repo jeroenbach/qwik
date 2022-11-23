@@ -51,6 +51,7 @@ export interface BuildConfig {
   build?: boolean;
   qwikcity?: boolean;
   qwikreact?: boolean;
+  qwikvue?: boolean;
   qwiklabs?: boolean;
   qwikauth?: boolean;
   qwikworker?: boolean;
