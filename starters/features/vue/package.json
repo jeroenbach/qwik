@@ -1,0 +1,41 @@
+{
+  "description": "Use Vue components into your Qwik app",
+  "__qwik__": {
+    "displayName": "Framework: Vue",
+    "priority": -20,
+    "docs": [
+      "https://qwik.builder.io/integrations/integration/vue/"
+    ],
+    "nextSteps": {
+      "title": "New folders created!",
+      "lines": [
+        " - /src/routes/vuew: New public route showcasing vue integration",
+        " - /src/integrations/vue: Here's where the vue component lives"
+      ]
+    },
+    "viteConfig": {
+      "imports": [
+        {
+          "defaultImport": "vue",
+          "importPath": "@vitejs/plugin-vue"
+        },
+        {
+          "namedImports": [
+            "qwikVue"
+          ],
+          "importPath": "@builder.io/qwik-vue"
+        }
+      ],
+      "vitePlugins": [
+        "vue()",
+        "qwikVue()"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@builder.io/qwik-vue": "0.0.1",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/tsconfig": "^0.4.0",
+    "vue": "3.2.45"
+  }
+}
