@@ -1,4 +1,4 @@
-import { createSSRApp, createApp, Component, h } from 'vue';
+import { createSSRApp, createApp, type Component, h } from 'vue';
 import type { VueProps } from './types';
 import { getAttrs } from './vue.utils';
 

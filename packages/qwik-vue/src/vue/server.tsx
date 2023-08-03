@@ -1,4 +1,4 @@
-import { QRL, Signal, SSRRaw, Slot } from '@builder.io/qwik';
+import { type QRL, type Signal, SSRRaw, Slot } from '@builder.io/qwik';
 import { createVueApp } from './createApp';
 import type { QwikifyOptions, VueProps } from './types';
 // @ts-ignore

@@ -1,8 +1,8 @@
 import { useOn, useOnDocument, useSignal, $ } from '@builder.io/qwik';
 import { isServer } from '@builder.io/qwik/build';
-import type { QwikifyOptions, QwikifyProps } from './types';
+import type { QwikifyOptions, QwikifyProps, VueProps } from './types';
 
-export const useWakeupSignal = (props: QwikifyProps<{}>, opts: QwikifyOptions = {}) => {
+export const useWakeupSignal = (props: QwikifyProps<VueProps>, opts: QwikifyOptions = {}) => {
   const signal = useSignal(false);
   const activate = $(() => (signal.value = true));
 

@@ -1,4 +1,4 @@
-import { NoSerialize, noSerialize, QRL, Signal } from '@builder.io/qwik';
+import { type NoSerialize, noSerialize, type QRL, type Signal } from '@builder.io/qwik';
 import { createVueApp } from './createApp';
 import type { Internal, VueProps } from './types';
 // @ts-ignore

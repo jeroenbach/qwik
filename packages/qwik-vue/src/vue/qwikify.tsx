@@ -1,8 +1,8 @@
 import {
   component$,
   implicit$FirstArg,
-  NoSerialize,
-  QRL,
+  type NoSerialize,
+  type QRL,
   RenderOnce,
   Slot,
   useSignal,
@@ -21,7 +21,7 @@ export function qwikifyQrl<PROPS extends VueProps>(
   vueCmpQrl: QRL<Component>,
   opts?: QwikifyOptions
 ) {
-  return component$<QwikifyProps<PROPS>>((props) => {
+  return component$((props: QwikifyProps<PROPS>) => {
     const hostRef = useSignal<Element>();
     const internalState = useSignal<NoSerialize<Internal<VueProps>>>();
     const slotRef = useSignal<Element>();
@@ -33,7 +33,9 @@ export function qwikifyQrl<PROPS extends VueProps>(
       track(() => wakeUp.value);
       const trackedProps = track(() => ({ ...props }));
 
-      if (isServer) return; // early exit
+      if (isServer) {
+        return;  // early exit
+      }
 
       // Update Props
       if (internalState.value?.app._instance && internalState.value.updateProps) {
